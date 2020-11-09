@@ -9,6 +9,9 @@ public class Cat extends Pet {
      * @param age age of this Cat
      */
     public Cat(String name, Integer age) {
+        Cat bad = new Cat(name);
+        int age1 = age;
+
 
     }
 

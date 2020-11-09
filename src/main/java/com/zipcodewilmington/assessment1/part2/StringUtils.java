@@ -21,7 +21,16 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+        String result = "";
+
+        for (int i = 0; i < sentence.length(); i++) {
+            if (sentence.charAt(i) == ' ') {
+                result = sentence.substring(0, i);
+                break;
+            }
+        }
+
+        return result;
     }
 
     /**
@@ -31,6 +40,7 @@ public class StringUtils {
      */
     public static String reverseFirstWord(String sentence) {
         return null;
+
     }
 
     /**
@@ -44,13 +54,15 @@ public class StringUtils {
 
 
     /**
-     * @param str string input from client
+     * @param str   string input from client
      * @param index the index of the character to be removed from `str`
      * @return string with identical contents, excluding the character at the specified index
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
-        return null;
-    }
+        String str1 = str.substring(0,index);
+        String str2 = str.substring(index+1,str.length());
+        return str1+str2;
 
+    }
 }
